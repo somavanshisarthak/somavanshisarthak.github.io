@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BrightStart Landing Page</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container nav-container">
+        <a class="logo" href="#">BrightStart</a>
+        <nav class="main-nav" aria-label="Primary">
+          <button class="nav-toggle" aria-expanded="false" aria-controls="nav-menu">
+            <span class="sr-only">Toggle navigation</span>
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+          <ul id="nav-menu" class="nav-list">
+            <li><a href="#features">Features</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a class="btn btn-outline" href="#get-started">Sign In</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero" id="get-started">
+        <div class="container hero-container">
+          <div class="hero-copy">
+            <p class="eyebrow">Empower your workflow</p>
+            <h1>Grow faster with the right tools at your fingertips.</h1>
+            <p class="subheading">
+              BrightStart helps teams collaborate, track progress, and launch projects with confidence.
+            </p>
+            <div class="hero-actions">
+              <a class="btn btn-primary" href="#get-started-form">Start Free Trial</a>
+              <a class="btn btn-link" href="#demo">View Demo</a>
+            </div>
+          </div>
+          <div class="hero-visual" role="presentation">
+            <div class="card">
+              <div class="card-header">
+                <span class="status-dot"></span>
+                <span class="card-title">Weekly Overview</span>
+              </div>
+              <div class="card-body">
+                <div class="metric">
+                  <span class="metric-label">Active Projects</span>
+                  <span class="metric-value">24</span>
+                </div>
+                <div class="metric">
+                  <span class="metric-label">On Track</span>
+                  <div class="metric-progress">
+                    <div class="metric-bar"></div>
+                  </div>
+                </div>
+                <div class="metric">
+                  <span class="metric-label">Team Satisfaction</span>
+                  <span class="metric-badge">92%</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="features" id="features">
+        <div class="container feature-grid">
+          <article class="feature-card">
+            <h2>Plan smarter</h2>
+            <p>Create roadmaps that keep everyone aligned and accountable.</p>
+          </article>
+          <article class="feature-card">
+            <h2>Collaborate easily</h2>
+            <p>Share updates, files, and feedback in one organized workspace.</p>
+          </article>
+          <article class="feature-card">
+            <h2>Launch confidently</h2>
+            <p>Track progress in real time and remove blockers before they grow.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="about" id="about">
+        <div class="container about-container">
+          <div>
+            <h2>Built for modern teams</h2>
+            <p>
+              BrightStart is crafted with distributed teams in mind, offering a flexible platform that adapts to your
+              unique workflows. From agile sprints to long-term planning, we empower teams to stay connected and deliver
+              results.
+            </p>
+          </div>
+          <ul class="about-list">
+            <li>Integrated dashboards and analytics</li>
+            <li>Secure cloud-based infrastructure</li>
+            <li>Seamless integrations with popular tools</li>
+          </ul>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer" id="contact">
+      <div class="container footer-container">
+        <div>
+          <a class="logo" href="#">BrightStart</a>
+          <p>© <span id="year"></span> BrightStart Labs. All rights reserved.</p>
+        </div>
+        <div class="footer-links">
+          <a href="https://www.linkedin.com" target="_blank" rel="noreferrer">LinkedIn</a>
+          <a href="https://www.twitter.com" target="_blank" rel="noreferrer">Twitter</a>
+          <a href="mailto:hello@brightstart.com">Email</a>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      const navToggle = document.querySelector(".nav-toggle");
+      const navMenu = document.querySelector("#nav-menu");
+
+      navToggle.addEventListener("click", () => {
+        const expanded = navToggle.getAttribute("aria-expanded") === "true";
+        navToggle.setAttribute("aria-expanded", String(!expanded));
+        navMenu.classList.toggle("open");
+      });
+
+      const yearElem = document.querySelector("#year");
+      yearElem.textContent = new Date().getFullYear();
+    </script>
+  </body>
+</html>
+
