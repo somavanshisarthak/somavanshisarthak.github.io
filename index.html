@@ -2,141 +2,326 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>BrightStart Landing Page</title>
-    <link rel="stylesheet" href="style.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Personal portfolio of Sarthak Somavanshi – Information Technology Engineering student and full-stack developer."
+    />
+    <title>Sarthak Somavanshi | Portfolio</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500&display=swap"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="style.css" />
   </head>
-  <body>
-    <header class="site-header">
-      <div class="container nav-container">
-        <a class="logo" href="#">BrightStart</a>
-        <nav class="main-nav" aria-label="Primary">
-          <button class="nav-toggle" aria-expanded="false" aria-controls="nav-menu">
+  <body data-theme="light">
+    <header class="site-header" id="home">
+      <div class="container nav-wrapper">
+        <a class="logo" href="#home" aria-label="Sarthak Somavanshi home link">
+          <span>SS</span>
+          <span class="logo-text">Sarthak Somavanshi</span>
+        </a>
+
+        <nav class="primary-nav" aria-label="Main navigation">
+          <button class="nav-toggle" aria-expanded="false" aria-controls="primary-menu">
             <span class="sr-only">Toggle navigation</span>
             <span></span>
             <span></span>
             <span></span>
           </button>
-          <ul id="nav-menu" class="nav-list">
-            <li><a href="#features">Features</a></li>
+
+          <ul id="primary-menu" class="nav-list">
             <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#education">Education</a></li>
             <li><a href="#contact">Contact</a></li>
-            <li><a class="btn btn-outline" href="#get-started">Sign In</a></li>
           </ul>
         </nav>
+
+        <button class="theme-toggle" aria-label="Toggle color theme">
+          <span class="theme-icon sun" aria-hidden="true">
+            <svg viewBox="0 0 24 24" role="presentation">
+              <path
+                d="M12 4.5v-2M12 21.5v-2M4.5 12h-2M21.5 12h-2M6.34 6.34l-1.4-1.4M18.06 18.06l-1.4-1.4M6.34 17.66l-1.4 1.4M18.06 5.94l-1.4 1.4"
+                stroke="currentColor"
+                stroke-width="1.5"
+                stroke-linecap="round"
+              />
+              <circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="1.5" fill="none" />
+            </svg>
+          </span>
+          <span class="theme-icon moon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" role="presentation">
+              <path
+                d="M20 14.5A8 8 0 0 1 9.5 4 8 8 0 1 0 20 14.5Z"
+                stroke="currentColor"
+                stroke-width="1.5"
+                fill="none"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </span>
+        </button>
       </div>
     </header>
 
     <main>
-      <section class="hero" id="get-started">
-        <div class="container hero-container">
-          <div class="hero-copy">
-            <p class="eyebrow">Empower your workflow</p>
-            <h1>Grow faster with the right tools at your fingertips.</h1>
-            <p class="subheading">
-              BrightStart helps teams collaborate, track progress, and launch projects with confidence.
+      <section class="hero" aria-labelledby="intro-heading">
+        <div class="container hero-container" data-animate>
+          <div class="hero-content">
+            <p class="hero-eyebrow">Information Technology Engineering Student</p>
+            <h1 id="intro-heading">Hi, I’m Sarthak Somavanshi.</h1>
+            <p class="hero-subtitle">
+              Third-year Information Technology Engineering undergraduate with hands-on full-stack experience creating responsive,
+              scalable web applications. Passionate about building thoughtful user experiences and solving complex
+              technical problems.
             </p>
             <div class="hero-actions">
-              <a class="btn btn-primary" href="#get-started-form">Start Free Trial</a>
-              <a class="btn btn-link" href="#demo">View Demo</a>
+              <a class="btn btn-primary" href="#projects">See My Work</a>
+              <a class="btn btn-secondary" href="#contact">Let’s Connect</a>
+            </div>
+            <div class="hero-contact">
+              <a href="mailto:somavanshisarthak@gmail.com">somavanshisarthak@gmail.com</a>
+              <span>•</span>
+              <a href="tel:+919373044066">+91 93730 44066</a>
+            </div>
+            <div class="hero-socials">
+              <a
+                class="social-link"
+                href="https://www.linkedin.com/in/sarthak-somavanshi"
+                target="_blank"
+                rel="noreferrer"
+                aria-label="LinkedIn profile"
+              >
+                <svg viewBox="0 0 24 24" role="presentation">
+                  <path
+                    d="M6 9h3v12H6zM7.5 5.5a1.75 1.75 0 1 0 0-3.5 1.75 1.75 0 0 0 0 3.5ZM11 9h3v1.8h.05c.42-.8 1.45-1.65 2.95-1.65 3.15 0 3.73 2.05 3.73 4.7V21H17v-6c0-1.43-.02-3.27-2-3.27-2 0-2.3 1.56-2.3 3.17V21h-3Z"
+                  />
+                </svg>
+                LinkedIn
+              </a>
+              <a
+                class="social-link"
+                href="https://github.com/somavanshisarthak"
+                target="_blank"
+                rel="noreferrer"
+                aria-label="GitHub profile"
+              >
+                <svg viewBox="0 0 24 24" role="presentation">
+                  <path
+                    d="M9 19c-4.5 1.5-4.5-2.5-6-3m12 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7a5.44 5.44 0 0 0-1.5-3.75 5.07 5.07 0 0 0-.09-3.77s-1.18-.35-3.9 1.48a13.38 13.38 0 0 0-7 0C5.29 1.65 4.11 2 4.11 2a5.07 5.07 0 0 0-.09 3.77A5.44 5.44 0 0 0 2.5 9.5c0 5.42 3.3 6.61 6.44 7a3.37 3.37 0 0 0-.94 2.63V22"
+                  />
+                </svg>
+                GitHub
+              </a>
             </div>
           </div>
-          <div class="hero-visual" role="presentation">
-            <div class="card">
-              <div class="card-header">
-                <span class="status-dot"></span>
-                <span class="card-title">Weekly Overview</span>
-              </div>
-              <div class="card-body">
-                <div class="metric">
-                  <span class="metric-label">Active Projects</span>
-                  <span class="metric-value">24</span>
-                </div>
-                <div class="metric">
-                  <span class="metric-label">On Track</span>
-                  <div class="metric-progress">
-                    <div class="metric-bar"></div>
-                  </div>
-                </div>
-                <div class="metric">
-                  <span class="metric-label">Team Satisfaction</span>
-                  <span class="metric-badge">92%</span>
-                </div>
-              </div>
+          <div class="hero-highlight">
+            <div class="stat-card" data-delay="100">
+              <p class="stat-label">Full-Stack Focus</p>
+              <p class="stat-value">React · Node · MySQL</p>
+              <p class="stat-detail">Building secure, responsive products end-to-end.</p>
+            </div>
+            <div class="stat-card" data-delay="200">
+              <p class="stat-label">Current Goal</p>
+              <p class="stat-value">Software Development Internship</p>
+              <p class="stat-detail">Open to Summer/Fall 2025 opportunities.</p>
             </div>
           </div>
         </div>
       </section>
 
-      <section class="features" id="features">
-        <div class="container feature-grid">
-          <article class="feature-card">
-            <h2>Plan smarter</h2>
-            <p>Create roadmaps that keep everyone aligned and accountable.</p>
-          </article>
-          <article class="feature-card">
-            <h2>Collaborate easily</h2>
-            <p>Share updates, files, and feedback in one organized workspace.</p>
-          </article>
-          <article class="feature-card">
-            <h2>Launch confidently</h2>
-            <p>Track progress in real time and remove blockers before they grow.</p>
-          </article>
-        </div>
-      </section>
-
-      <section class="about" id="about">
-        <div class="container about-container">
+      <section id="about" class="section about" aria-labelledby="about-heading">
+        <div class="container section-grid" data-animate>
           <div>
-            <h2>Built for modern teams</h2>
+            <p class="section-eyebrow">About</p>
+            <h2 id="about-heading">Turning ideas into functional products.</h2>
             <p>
-              BrightStart is crafted with distributed teams in mind, offering a flexible platform that adapts to your
-              unique workflows. From agile sprints to long-term planning, we empower teams to stay connected and deliver
-              results.
+              I’m a third-year Information Technology Engineering student with strong academics (8.8 CGPA) and a passion for building
+              full-stack applications. From crafting accessible interfaces to deploying secure backend APIs, I enjoy
+              working across the stack and collaborating with teams to deliver high-quality solutions.
             </p>
           </div>
-          <ul class="about-list">
-            <li>Integrated dashboards and analytics</li>
-            <li>Secure cloud-based infrastructure</li>
-            <li>Seamless integrations with popular tools</li>
+          <ul class="about-highlights">
+            <li>Hands-on React, Node.js, MySQL experience</li>
+            <li>Solid DSA & problem-solving foundation</li>
+            <li>Effective communicator & team collaborator</li>
+            <li>Built responsive, scalable apps end-to-end</li>
           </ul>
+        </div>
+      </section>
+
+      <section id="skills" class="section skills" aria-labelledby="skills-heading">
+        <div class="container" data-animate>
+          <p class="section-eyebrow">Skills</p>
+          <h2 id="skills-heading">Technical toolkit</h2>
+          <div class="skills-grid">
+            <article class="skill-card">
+              <h3>Programming</h3>
+              <ul>
+                <li>Java</li>
+                <li>C++</li>
+                <li>Python</li>
+                <li>JavaScript</li>
+              </ul>
+            </article>
+            <article class="skill-card">
+              <h3>Frontend & Backend</h3>
+              <ul>
+                <li>React</li>
+                <li>Node.js</li>
+                <li>HTML</li>
+                <li>CSS</li>
+              </ul>
+            </article>
+            <article class="skill-card">
+              <h3>Database</h3>
+              <ul>
+                <li>MySQL</li>
+                <li>MongoDB</li>
+              </ul>
+            </article>
+            <article class="skill-card">
+              <h3>Tools</h3>
+              <ul>
+                <li>Git</li>
+                <li>VS Code</li>
+                <li>Cursor</li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="projects" class="section projects" aria-labelledby="projects-heading">
+        <div class="container" data-animate>
+          <p class="section-eyebrow">Projects</p>
+          <h2 id="projects-heading">Featured work</h2>
+          <article class="project-card">
+            <div class="project-meta">
+              <p class="project-label">EventHub · Full-Stack · Individual</p>
+              <h3>College Event Management System</h3>
+              <p>
+                Built a production-ready event management application featuring role-based access, real-time
+                notifications, and modular architecture for routes, middleware, services, and configuration.
+              </p>
+            </div>
+            <ul class="project-points">
+              <li>Implemented secure JWT authentication for students, organizers, and admins.</li>
+              <li>Responsive React.js frontend with Material UI, Axios, and React Router.</li>
+              <li>Robust Node.js + Express + MySQL backend delivering REST APIs.</li>
+              <li>Automated notifications using Nodemailer plus in-app messaging and reminders.</li>
+              <li>Focused on scalability, performance, and cross-browser compatibility.</li>
+            </ul>
+            <div class="project-stack">
+              <span>React</span>
+              <span>Material UI</span>
+              <span>Node.js</span>
+              <span>Express</span>
+              <span>MySQL</span>
+              <span>JWT</span>
+            </div>
+            <div class="project-links">
+              <a
+                class="btn btn-secondary"
+                href="https://github.com/somavanshisarthak/event-management-website"
+                target="_blank"
+                rel="noreferrer"
+              >
+                View Repository
+              </a>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section id="education" class="section education" aria-labelledby="education-heading">
+        <div class="container" data-animate>
+          <p class="section-eyebrow">Education</p>
+          <h2 id="education-heading">Academic journey</h2>
+          <div class="education-grid">
+            <article class="education-card">
+              <div class="education-header">
+                <h3>Bachelor of Engineering (IT)</h3>
+                <p>KBTCOE Nashik · 2023 – Present</p>
+              </div>
+              <ul>
+                <li>Third Year (TY): Pursuing</li>
+                <li>Second Year (SY): 8.8 CGPA</li>
+                <li>First Year (FY): 8.2 CGPA</li>
+              </ul>
+            </article>
+            <article class="education-card">
+              <div class="education-header">
+                <h3>SNBP International School (CBSE)</h3>
+                <p>12th Grade · 2022 – 2023</p>
+              </div>
+              <ul>
+                <li>Overall Score: 65%</li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" class="section contact" aria-labelledby="contact-heading">
+        <div class="container contact-card" data-animate>
+          <div>
+            <p class="section-eyebrow">Contact</p>
+            <h2 id="contact-heading">Let’s build something impactful.</h2>
+            <p>
+              I’m actively seeking a software development internship where I can contribute to real-world products while
+              learning from experienced engineers. Reach out and I’ll get back within 24 hours.
+            </p>
+          </div>
+          <div class="contact-links">
+            <a href="mailto:somavanshisarthak@gmail.com" class="contact-link">
+              <span>Email</span>
+              <span>somavanshisarthak@gmail.com</span>
+            </a>
+            <a href="tel:+919373044066" class="contact-link">
+              <span>Phone</span>
+              <span>+91 93730 44066</span>
+            </a>
+            <a
+              href="https://www.linkedin.com/in/sarthak-somavanshi"
+              target="_blank"
+              rel="noreferrer"
+              class="contact-link"
+            >
+              <span>LinkedIn</span>
+              <span>www.linkedin.com/in/sarthak-somavanshi</span>
+            </a>
+            <a
+              href="https://github.com/somavanshisarthak"
+              target="_blank"
+              rel="noreferrer"
+              class="contact-link"
+            >
+              <span>GitHub</span>
+              <span>github.com/somavanshisarthak</span>
+            </a>
+          </div>
         </div>
       </section>
     </main>
 
-    <footer class="site-footer" id="contact">
-      <div class="container footer-container">
-        <div>
-          <a class="logo" href="#">BrightStart</a>
-          <p>© <span id="year"></span> BrightStart Labs. All rights reserved.</p>
-        </div>
+    <footer class="site-footer">
+      <div class="container footer-content">
+        <p>© <span id="year"></span> Sarthak Somavanshi. All rights reserved.</p>
         <div class="footer-links">
-          <a href="https://www.linkedin.com" target="_blank" rel="noreferrer">LinkedIn</a>
-          <a href="https://www.twitter.com" target="_blank" rel="noreferrer">Twitter</a>
-          <a href="mailto:hello@brightstart.com">Email</a>
+          <a href="mailto:somavanshisarthak@gmail.com">Email</a>
+          <a href="tel:+919373044066">Phone</a>
+          <a href="#contact">Contact</a>
         </div>
       </div>
     </footer>
 
-    <script>
-      const navToggle = document.querySelector(".nav-toggle");
-      const navMenu = document.querySelector("#nav-menu");
-
-      navToggle.addEventListener("click", () => {
-        const expanded = navToggle.getAttribute("aria-expanded") === "true";
-        navToggle.setAttribute("aria-expanded", String(!expanded));
-        navMenu.classList.toggle("open");
-      });
-
-      const yearElem = document.querySelector("#year");
-      yearElem.textContent = new Date().getFullYear();
-    </script>
+    <script src="script.js" defer></script>
   </body>
 </html>
 
